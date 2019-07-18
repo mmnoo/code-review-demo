@@ -1,4 +1,12 @@
 // exercize ignores validation
+const averageHexColor = (color1, color2) => {
+    const rgb1 = createRgbFromHex(color1);
+    const rgb2 = createRgbFromHex(color2);
+    const redHex = averageHex(rgb1[0], rgb2[0]);
+    const greenHex = averageHex(rgb1[1], rgb2[1]);
+    const blueHex = averageHex(rgb1[2], rgb2[2]);
+    return redHex + greenHex + blueHex;
+}
 
 const numberToHex = number => Math.round(number).toString(16);
 const hexToNumber = hex => parseInt(hex, 16);
@@ -6,15 +14,9 @@ const sumReducer = (accumulator, number) => accumulator + number;
 const average = (...numbers) => numbers.reduce(sumReducer)/numbers.length;
 const averageRounded = (...numbers) => Math.round(average(...numbers));
 const splitHexColor = (color) => [color.slice(0, 2), color.slice(2, 4), color.slice(4, 6)];
-const averageHexColor = (color1, color2) => {
-    const rgb1 = splitHexColor(color1).map(color => hexToNumber(color));
-    const rgb2 = splitHexColor(color2).map(color => hexToNumber(color));
-    const redHex = numberToHex(averageRounded(rgb1[0], rgb2[0]));
-    const greenHex = numberToHex(averageRounded(rgb1[1], rgb2[1]));
-    const blueHex = numberToHex(averageRounded(rgb1[2], rgb2[2]));
+const createRgbFromHex = (hex) => splitHexColor(hex).map(colorPart => hexToNumber(colorPart));
+const averageHex = (number1, number2) => numberToHex(averageRounded(number1, number2))
 
-    return redHex + greenHex + blueHex;
-}
 
 const testNumberToHex1 = numberToHex(255);
 const testNumberToHex2 = numberToHex(43.4);
