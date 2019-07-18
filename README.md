@@ -1,1 +1,1 @@
-This code is to demonstrate code reviews.
+This code shows atomic commits which will be used to demonstrate a code review.
