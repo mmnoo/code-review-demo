@@ -47,11 +47,24 @@ console.assert(testSplitHexColor1[0] === '01', testSplitHexColor1);
 console.assert(testSplitHexColor1[1] === '7b', testSplitHexColor1);
 console.assert(testSplitHexColor1[2] === '5f', testSplitHexColor1);
 
-const testAverageHexColor1 = averageHexColor('ff2b2c', 'fe2a2b');
+const testColor1 = 'ff2b2c';
+const testColor2 = 'fe2a2b';
+
+const testAverageHexColor1 = averageHexColor(testColor1, testColor2);
 const testAverageHexColor2 = averageHexColor('3300ff', '99cc33');
 const testAverageHexColor3 = averageHexColor('336699', 'ff00ff');
-
 console.assert(testAverageHexColor1 === 'ff2b2c', testAverageHexColor1);
 console.assert(testAverageHexColor2 === '666699', testAverageHexColor2);
 console.assert(testAverageHexColor3 === '9933cc', testAverageHexColor3);
+
+const testCreateRgbFromHex1 = createRgbFromHex(testColor1);
+const testCreateRgbFromHex2 = createRgbFromHex(testColor2);
+console.assert(testCreateRgbFromHex1[0] === 255, testCreateRgbFromHex1);
+console.assert(testCreateRgbFromHex1[1] === 43, testCreateRgbFromHex1);
+console.assert(testCreateRgbFromHex1[2] === 44, testCreateRgbFromHex1);
+
+const testAverageHex1 = averageHex(testCreateRgbFromHex1[0], testCreateRgbFromHex2[0]); 
+console.assert(testAverageHex1 === 'ff', testAverageHex1);
+
+
 
