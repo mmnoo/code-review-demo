@@ -1,1 +1,1 @@
-This code shows atomic commits which will be used to demonstrate a code review.
+Random coding exercizes. 

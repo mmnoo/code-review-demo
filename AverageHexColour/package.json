@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "This code shows atomic commits which will be used to demonstrate a code review.",
   "main": "averageHexColor.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mmnoo/code-review-demo.git"
