@@ -1,1 +1,1 @@
-This code is to demonstrate code reviews.
+Random coding exercizes. 
