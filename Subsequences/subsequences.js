@@ -41,8 +41,8 @@ const firstSubstringMatchOfArrayStrings = (arrayOfTestStrings, string) => {
 };
 console.assert(firstSubstringMatchOfArrayStrings(['z', 'foo', 'bar', 'bam'], 'barista') === 'bar', 'firstSubstringMatchOfArrayOfStrings fails');
 
-// finds the longest subsequence from one string that is a substring of another string
 function longestSubsequenceSubstring(subsequenceString, string) {
+  // finds the longest subsequence from one string that is a substring of another string
     const subsequences = getSubsequences(subsequenceString);
     const subsequencesSortedByLength = getArraySortedByStringLength(subsequences);
     return firstSubstringMatchOfArrayStrings(subsequencesSortedByLength, string);
