@@ -1,0 +1,11 @@
+{
+  "name": "subsequences",
+  "version": "1.0.0",
+  "description": "playing with algorithms",
+  "main": "subsequences.js",
+  "author": "Melissa Nunes",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
