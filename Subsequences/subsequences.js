@@ -32,17 +32,12 @@ console.assert(_.isEqual(getArraySortedByStringLength(['1', '1234', '12', '123']
 
 const firstSubstringMatchOfArrayStrings = (arrayOfTestStrings, string) => {
   // could make more generic and not assume first param is array'
-  for( let i = 0; i < arrayOfTestStrings.length; i++){
-    const testString = arrayOfTestStrings[i];
-    if(string.includes(testString)) {
-        return testString;
-    }
-  }
+  return arrayOfTestStrings.find(testString => string.includes(testString));
 };
 console.assert(firstSubstringMatchOfArrayStrings(['z', 'foo', 'bar', 'bam'], 'barista') === 'bar', 'firstSubstringMatchOfArrayOfStrings fails');
 
-// finds the longest subsequence from one string that is a substring of another string
 function longestSubsequenceSubstring(subsequenceString, string) {
+  // finds the longest subsequence from one string that is a substring of another string
     const subsequences = getSubsequences(subsequenceString);
     const subsequencesSortedByLength = getArraySortedByStringLength(subsequences);
     return firstSubstringMatchOfArrayStrings(subsequencesSortedByLength, string);
