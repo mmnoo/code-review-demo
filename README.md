@@ -1,1 +1,1 @@
-Random coding exercizes. 
+Random coding exercises. 
